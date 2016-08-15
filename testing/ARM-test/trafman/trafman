@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/qemu-arm-static -L /usr/arm-linux-gnueabihf/ /root/desktop/testing/ARM-test/trafman/real_trafman
