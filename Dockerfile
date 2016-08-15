@@ -43,7 +43,8 @@ RUN git clone https://github.com/bruce30262/dotfiles.git ~/dotfiles &&\
     bash set_arm_env.sh
 
 # install ctf-tools for pwning
-ARG NEWPWN=1
+# if NEWPWN = timestamp then install new tools
+ARG NEWPWN=0
 RUN cd ~/dotfiles &&\
     ruby install_ctf_pwn.rb
 
