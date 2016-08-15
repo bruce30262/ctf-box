@@ -60,3 +60,9 @@ else
     puts "[!] Can't find angr"
 end
 
+# afl
+if is_this_installed("afl-fuzz")
+    puts "AFL exist"
+else
+    puts "[!] Can't find AFL (afl-fuzz)"
+end

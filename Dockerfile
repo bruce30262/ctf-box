@@ -48,6 +48,9 @@ ARG NEWPWN=0
 RUN cd ~/dotfiles &&\
     ruby install_ctf_pwn.rb
 
+# do the following so AFL will work
+RUN echo core > /proc/sys/kernel/core_pattern
+
 # enable ssh
 RUN rm -f /etc/service/sshd/down && /etc/my_init.d/00_regen_ssh_host_keys.sh
 
