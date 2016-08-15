@@ -53,7 +53,7 @@ RUN rm -f /etc/service/sshd/down && /etc/my_init.d/00_regen_ssh_host_keys.sh
 # add ssh public key
 ADD ssh /root/.ssh/
 
-# create dir for workspace & mount point
+# create dir for workspace
 RUN mkdir -p /root/desktop && chown root:root /root/desktop
 COPY restart_ssh.sh /root/desktop/restart_ssh.sh
 RUN chmod u+x /root/desktop/restart_ssh.sh
