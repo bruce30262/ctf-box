@@ -1,2 +1,2 @@
 # ctf-box
-docker image for my ctf-box
+docker image of my ctf-box
