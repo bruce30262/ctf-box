@@ -66,3 +66,10 @@ if is_this_installed("afl-fuzz")
 else
     puts "[!] Can't find AFL (afl-fuzz)"
 end
+
+# qira
+if is_this_installed("qira")
+    puts "qira exist"
+else
+    puts "[!] Can't find qira"
+end
