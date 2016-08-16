@@ -29,6 +29,9 @@ RUN dpkg --add-architecture i386 && apt-get update \
         libffi-dev \
         libssl-dev \
         libssh-dev \
+        nc \
+        netstat \
+        lsof \
         wget \
         curl \
         tmux \
