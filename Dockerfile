@@ -29,6 +29,7 @@ RUN dpkg --add-architecture i386 && apt-get update \
         libffi-dev \
         libssl-dev \
         libssh-dev \
+        libc6-dbg:i386 \
         netcat \
         net-tools \
         lsof \
