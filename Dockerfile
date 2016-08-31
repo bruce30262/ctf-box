@@ -54,10 +54,8 @@ RUN git clone https://github.com/bruce30262/dotfiles.git ~/dotfiles &&\
     bash set_arm_env.sh
 
 # install ctf-tools for pwning
-# if NEWPWN = timestamp then install new tools
-ARG NEWPWN=0
-RUN cd ~/dotfiles &&\
-    ruby install_ctf_pwn.rb
+RUN cd ~/dotfiles/ctf-tool &&\
+    ruby install_ctf_tool.rb --all
 
 # enable ssh
 RUN rm -f /etc/service/sshd/down && /etc/my_init.d/00_regen_ssh_host_keys.sh
