@@ -2,7 +2,8 @@ FROM phusion/baseimage:latest
 MAINTAINER bruce30262
 
 # apt-get
-#RUN sed -i "s/archive.ubuntu.com/tw.archive.ubuntu.com/g" /etc/apt/sources.list
+# not using dockerhub auto-build, so better fetch those packages from TW
+RUN sed -i "s/archive.ubuntu.com/tw.archive.ubuntu.com/g" /etc/apt/sources.list
 RUN dpkg --add-architecture i386 && apt-get update \
         && apt-get install build-essential -y \
         && apt-get install -y \
