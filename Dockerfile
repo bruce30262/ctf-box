@@ -1,6 +1,12 @@
 FROM phusion/baseimage:latest
 MAINTAINER bruce30262
 
+# Set the locale
+RUN locale-gen en_US.UTF-8  
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8
+
 # apt-get
 # not using dockerhub auto-build, so better fetch those packages from TW
 RUN sed -i "s/archive.ubuntu.com/tw.archive.ubuntu.com/g" /etc/apt/sources.list
