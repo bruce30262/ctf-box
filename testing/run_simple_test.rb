@@ -73,3 +73,10 @@ if is_this_installed("qira")
 else
     puts "[!] Can't find qira"
 end
+
+# Intel-pin
+if is_dir_exist("#{Dir.home}/pin")
+    puts "Intel-pin exist"
+else
+    puts "[!] Can't find Intel-pin"
+end
