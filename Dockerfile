@@ -57,6 +57,9 @@ RUN git clone https://github.com/bruce30262/dotfiles.git ~/dotfiles &&\
 RUN cd ~/dotfiles/ctf-tool &&\
     ruby install_ctf_tool.rb --all
 
+# numpy
+RUN pip install numpy
+
 # enable ssh
 RUN rm -f /etc/service/sshd/down && /etc/my_init.d/00_regen_ssh_host_keys.sh
 
