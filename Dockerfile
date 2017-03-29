@@ -60,6 +60,9 @@ RUN cd ~/dotfiles/ctf-tool &&\
 # numpy
 RUN pip install numpy
 
+# one_gadget by david942j
+RUN gem install one_gadget
+
 # create dir for workspace
 RUN mkdir -p /root/desktop && chown root:root /root/desktop
 COPY testing/ /root/desktop/testing/
