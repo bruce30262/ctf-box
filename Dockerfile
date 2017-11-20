@@ -60,9 +60,11 @@ RUN cd ~/dotfiles/ctf-tool &&\
 # numpy
 RUN pip install numpy
 
-# one_gadget by david942j
-RUN gem install one_gadget
-
+# one_gadget & seccom-tools by david942j
+RUN sudo apt-get install ruby-dev &&\
+    gem install one_gadget &&\
+    gem install seccomp-tools
+    
 # create dir for workspace
 RUN mkdir -p /root/desktop && chown root:root /root/desktop
 COPY testing/ /root/desktop/testing/
