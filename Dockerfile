@@ -61,7 +61,7 @@ RUN cd ~/dotfiles/ctf-tool &&\
 RUN pip install numpy
 
 # one_gadget & seccom-tools by david942j
-RUN sudo apt-get install ruby-dev &&\
+RUN sudo apt-get install ruby-dev -y &&\
     gem install one_gadget &&\
     gem install seccomp-tools
     
