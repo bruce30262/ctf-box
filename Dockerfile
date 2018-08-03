@@ -55,7 +55,7 @@ RUN git clone https://github.com/bruce30262/dotfiles.git ~/dotfiles &&\
 
 # install ctf-tools for pwning
 RUN cd ~/dotfiles/ctf-tool &&\
-    ruby install_ctf_tool.rb --all --exclude="qira,afl,pin"
+    ruby install_ctf_tool.rb --libcdb --r2 --z3
 
 # numpy
 RUN pip install numpy
