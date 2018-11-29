@@ -44,7 +44,8 @@ RUN dpkg --add-architecture i386 && apt-get update \
         curl \
         tmux \
         zsh \
-        vim
+        vim \ 
+        qemu
 
 # dotfiles
 RUN git clone https://github.com/bruce30262/dotfiles.git ~/dotfiles &&\
