@@ -54,9 +54,9 @@ RUN git clone https://github.com/bruce30262/dotfiles.git ~/dotfiles &&\
     ruby install.rb --tmux --zsh --dbg=all &&\
     bash set_arm_env.sh
 
-# install ctf-tools for pwning
+# install ctf-tools
 RUN cd ~/dotfiles/ctf-tool &&\
-    ruby install_ctf_tool.rb --libcdb --r2 --z3
+    ruby install_ctf_tool.rb --libcdb --r2 --z3 --bctk
 
 # numpy
 RUN pip install numpy
